@@ -18,21 +18,24 @@ export default function Channel({ channel, online, game, viewers }) {
           })}
         >
           <h3
-            className={clsx("font-medium", {
+            className={clsx("font-medium hidden lg:block", {
               "text-[14px]": online === false,
             })}
           >
             {channel}
           </h3>
-          {online && <p className="text-slate-400 text-[13px]">{game}</p>}
+          {online && (
+            <p className="text-slate-400 text-[13px] hidden lg:block">{game}</p>
+          )}
         </div>
       </div>
       {online && (
-        <p className="flex items-center gap-1 text-[13px]">
-          <div className="rounded-full size-2 bg-red-600"></div> {viewers}
-        </p>
+        <div className="flex items-center gap-1 text-[13px]">
+          <div className="rounded-full size-2 bg-red-600 hidden lg:block"></div>{" "}
+          <p className="hidden lg:block">{viewers}</p>
+        </div>
       )}
-      {!online && <p className="text-[13px]">Offline</p>}
+      {!online && <p className="text-[13px] hidden lg:block">Offline</p>}
     </a>
   );
 }
