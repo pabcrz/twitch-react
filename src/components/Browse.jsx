@@ -23,10 +23,10 @@ export default function Browse() {
     },
   ];
   return (
-    <section className="p-4">
-      <h1 className="font-bold text-4xl pb-6">Browse</h1>
+    <section className="p-4 flex flex-col">
+      <h1 className="font-bold text-[54px] pb-6">Browse</h1>
       <div className=" hidden sm:block">
-        <article className="grid gap-7 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        <article className="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {categorys.map((category, index) => {
             return (
               <BrowseCategory

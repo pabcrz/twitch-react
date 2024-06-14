@@ -4,7 +4,7 @@ export default function CardGame(props) {
   const { tags } = props;
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col ">
       <img src={props.image} alt={props.title} className="max-w-full h-auto" />
       <div className="flex flex-col py-2">
         <h3 className="text-[14px] font-semibold">{props.title}</h3>
