@@ -11,6 +11,7 @@ export default function GameCategory() {
           views={game.views}
           tags={game.tags}
           image={game.img}
+          isnew={game.isnew}
         />
       ))}
     </section>
